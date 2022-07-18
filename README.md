@@ -1,5 +1,5 @@
-# What Guns Image Manifest Generator
-NPM module to generate a manifest of all of the images in a given folder, for purposes of loading them in the browser without having to hardcode all of the iamge paths.
+# What Guns Manifest Generator
+`wg-manifest` is a script to generate a JSON file containing a manifest of all of the files in a given folder and its subfolders. This is intended for use in loading images and audio into JavaScript/HTML browser games: the game can fetch the manifest, then load all images from the manifest by fetching their paths.
 
 ## Usage
 ### Generating the manifest
@@ -7,17 +7,21 @@ Maybe someday this will be on NPM. Until then, download and install the reposito
 ````
     $ npm install -g ./
 ````
-Pass in the directory where this images are located. By default, the manifest will go to standard output:
+Pass in the directory on which the manifest should be generated. By default, the manifest will go to standard output:
 ````
-    $ wg-image-manifest ./images
+    $ wg-manifest ./images
 ````
 To write the manifest to a file, use the `-o` tag:
 ````
-    $ wg-image-manifest -o=imageManifest.json ./images
+    $ wg-manifest -o=imageManifest.json ./images
+````
+To restrict the manifest to only certain file extensions, use `--audio`, `--image`, or a custom list of extensions with `-e`
+````
+    $ wg-manifest --audio --image -e=tiff,json ./media
 ````
 If you have a `watch` program installed, you can keep the manifest up to date:
 ````
-    $ watch "wg-image-manifest -o=imageManifest.json ./images"
+    $ watch "wg-manifest -o=imageManifest.json ./images"
 ````
 
 ### Using the manifest
