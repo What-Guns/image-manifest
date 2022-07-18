@@ -23,11 +23,20 @@ function usage() {
 Options:
   -o=<output-file>: write the manifest to an output file
   -h, --help:       display this help message
-  -e=audio:         only include files with an audio extension (.ogg, .mp3, .wav)
-  -e=image:         only include files with an image extension (.jpg, .jpeg, .png, .bmp)
+  --image:          only include files with an image extension (.jpg, .jpeg, .png, .bmp)
+  --audio:          only include files with an audio extension (.ogg, .mp3, .wav)           
   -e=<extensions>:  use a custom, comma-separated list of extensions (example: -e=ts,js,jsx,json) 
 `
   );
+}
+
+function findExtensions(options) {
+  return options.map(o => {
+    if (o === '--image') return IMAGE_FILE_EXTENSIONS;
+    if (o === '--audio') return AUDIO_FILE_EXTENSIONS;
+    if (o.startsWith('-e=')) return o.split('=')[1].split(',');
+    return [];
+  }).flat();
 }
 
 const args = process.argv;
@@ -45,16 +54,7 @@ if (options.includes('-h') || options.includes('--help')) {
 
 const outputFile = options.find(o => o.startsWith('-o='))?.split('=')[1];
 
-let extensions = IMAGE_FILE_EXTENSIONS;
-const extensionsOption = options.find(o => o.startsWith('-e='))?.split('=')[1];
-if (extensionsOption === 'audio') {
-  extensions = AUDIO_FILE_EXTENSIONS;
-} else if (extensionsOption === 'image') {
-  extensions = IMAGE_FILE_EXTENSIONS;
-} else if (extensionsOption) {
-  extensions = extensionsOption.split(',');
-}
-
+const extensions = findExtensions(options);
 const path = args[args.length - 1];
 
 const manifest = JSON.stringify(generateManifest(path, extensions), null, 2) + "\n";

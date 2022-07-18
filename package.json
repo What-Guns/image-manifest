@@ -1,11 +1,11 @@
 {
-  "name": "image-manifest",
+  "name": "wg-manifest",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generates a manifest JSON file containing a hierarchical listing of files corresponding to the directory structure",
   "type": "module",
-  "main": "lib/image-manifest.js",
+  "main": "lib/manifest.js",
   "bin": {
-    "wg-image-manifest": "bin/index.js"
+    "wg-manifest": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
