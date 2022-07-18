@@ -27,7 +27,7 @@ if (options.includes('-h') || options.includes('--help')) {
   process.exit(0);
 }
 
-const outputFile = options.find(o => o.startsWith('o='))?.split('=')[1];
+const outputFile = options.find(o => o.startsWith('-o='))?.split('=')[1];
 
 const path = args[args.length - 1];
 
