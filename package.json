@@ -1,6 +1,6 @@
 {
   "name": "wg-manifest",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Generates a manifest JSON file containing a hierarchical listing of files corresponding to the directory structure",
   "type": "module",
   "main": "lib/manifest.js",
