@@ -25,4 +25,4 @@ If you have a `watch` program installed, you can keep the manifest up to date:
 ````
 
 ### Using the manifest
-If the manifest is written to a known place, a website could `fetch` the manifest, then use the file paths to create `Image` objects to draw to a canvas. I'm working on another project that will provide facilites for using this manifest.
+If the manifest is written to a known place, a website could `fetch` the manifest, then use the file paths to create `Image` objects to draw to a canvas. An example of this can be found in [tsg-boilerplate](https://github.com/bassguitarbill/tsg-boilerplate/blob/main/src/images.ts#L28). 
