@@ -3,9 +3,9 @@
 
 ## Usage
 ### Generating the manifest
-Maybe someday this will be on NPM. Until then, download and install the repository:
+Install this NPM module:
 ````
-    $ npm install -g ./
+    $ npm install -g wg-manifest 
 ````
 Pass in the directory on which the manifest should be generated. By default, the manifest will go to standard output:
 ````
@@ -15,7 +15,7 @@ To write the manifest to a file, use the `-o` tag:
 ````
     $ wg-manifest -o=imageManifest.json ./images
 ````
-To restrict the manifest to only certain file extensions, use `--audio`, `--image`, or a custom list of extensions with `-e`
+To restrict the manifest to only certain file extensions, use `--audio`, `--image`, or a custom list of extensions with `-e`;
 ````
     $ wg-manifest --audio --image -e=tiff,json ./media
 ````

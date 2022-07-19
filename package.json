@@ -16,5 +16,12 @@
   ],
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://github.com/What-Guns/wg-manifest",
+  "bugs": "https://github.com/What-Guns/wg-manifest/issues",
+  "author": "Bill Rossi <bassguitarbill@gmail.com> (https://billros.si)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/What-Guns/wg-manifest.git"
+  }
 }
