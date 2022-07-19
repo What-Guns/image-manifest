@@ -1,6 +1,6 @@
 {
   "name": "wg-manifest",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Generates a manifest JSON file containing a hierarchical listing of files corresponding to the directory structure",
   "type": "module",
   "main": "lib/manifest.js",
@@ -8,7 +8,7 @@
     "wg-manifest": "bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "keywords": [],
   "author": "",
