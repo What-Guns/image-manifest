@@ -1,6 +1,6 @@
 {
   "name": "wg-manifest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generates a manifest JSON file containing a hierarchical listing of files corresponding to the directory structure",
   "type": "module",
   "main": "lib/manifest.js",
@@ -15,11 +15,10 @@
     "bin"
   ],
   "keywords": [],
-  "author": "",
+  "author": "Bill Rossi <bassguitarbill@gmail.com> (https://billros.si)",
   "license": "ISC",
   "homepage": "https://github.com/What-Guns/wg-manifest",
   "bugs": "https://github.com/What-Guns/wg-manifest/issues",
-  "author": "Bill Rossi <bassguitarbill@gmail.com> (https://billros.si)",
   "repository": {
     "type": "git",
     "url": "https://github.com/What-Guns/wg-manifest.git"
