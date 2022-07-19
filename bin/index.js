@@ -46,7 +46,7 @@ if (args.length < 3) {
   process.exit(1);
 }
 
-const options = args.slice(2, -1);
+const options = args.slice(2);
 if (options.includes('-h') || options.includes('--help')) {
   usage();
   process.exit(0);
