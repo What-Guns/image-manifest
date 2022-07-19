@@ -10,6 +10,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\""
   },
+  "files": [
+    "lib",
+    "bin"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC"
